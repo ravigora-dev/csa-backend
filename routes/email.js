@@ -152,7 +152,7 @@ routes.post("/send-email", async (req, res) => {
     <!-- Footer -->
     <p style="font-size: 14px; color: #444;">
       Best regards,<br />
-      <strong>The Careersure Academy Team</strong>
+      <strong>Careersure Academy</strong>
     </p>
   </div>
 </div>
