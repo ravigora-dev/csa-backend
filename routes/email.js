@@ -6,11 +6,11 @@ const dotenv = require("dotenv");
 const upload = multer();
 const fs = require("fs");
 const path = require("path");
-const imageBuffer = fs.readFileSync(
-  path.join(__dirname, "assets", "image1.jpeg")
-);
-const base64ImageString = imageBuffer.toString("base64");
-const base64Image = `data:image/jpeg;base64,${base64ImageString}`;
+// const imageBuffer = fs.readFileSync(
+//   path.join(__dirname, "assets", "image1.jpeg")
+// );
+// const base64ImageString = imageBuffer.toString("base64");
+// const base64Image = `data:image/jpeg;base64,${base64ImageString}`;
 
 // Use imageBuffer for email attachments, etc.
 
