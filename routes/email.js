@@ -908,7 +908,7 @@ routes.post("/send-email", async (req, res) => {
       attachments: [
         {
           filename: "logo.jpeg",
-          path: path.join(__dirname, "assets", "image1.jpeg"),
+          path: path.join(__dirname, "assets", "image1.png"),
           cid: "logo@careersure", // Match this ID with the img src above
         },
         {
