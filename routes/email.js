@@ -1829,21 +1829,21 @@ routes.post("/send-email", async (req, res) => {
     }
 
     // ✅ Then send to sales team
-    const { data: salesResponse, error: salesError } = await resend.emails.send(
-      {
-        from: process.env.EMAIL_USER || "onboarding@resend.dev",
-        to: "careersure.info@gmail.com", // fixed sales team email
-        subject: "📩 New Lead Notification - Careersure Academy",
-        html: saleEmailContent, // or use same content as user, depends on need
-      }
-    );
+    // const { data: salesResponse, error: salesError } = await resend.emails.send(
+    //   {
+    //     from: process.env.EMAIL_USER || "onboarding@resend.dev",
+    //     to: "careersure.info@gmail.com", // fixed sales team email
+    //     subject: "📩 New Lead Notification - Careersure Academy",
+    //     html: saleEmailContent, // or use same content as user, depends on need
+    //   }
+    // );
 
-    if (salesError) {
-      console.error("Sales Email Error:", salesError);
-      return res
-        .status(500)
-        .json({ error: "Failed to send email to sales team" });
-    }
+    // if (salesError) {
+    //   console.error("Sales Email Error:", salesError);
+    //   return res
+    //     .status(500)
+    //     .json({ error: "Failed to send email to sales team" });
+    // }
 
     res.status(200).json({
       success: true,
