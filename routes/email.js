@@ -1772,7 +1772,7 @@ routes.post("/send-email", async (req, res) => {
     // Prepare email with attachments (inline images)
     const msg = {
       to,
-      from: "your_verified_email@domain.com", // must be verified in SendGrid
+      from: process.env.EMAIL_USER, // must be verified in SendGrid
       subject: emailSubject,
       html: emailContent,
       attachments:
