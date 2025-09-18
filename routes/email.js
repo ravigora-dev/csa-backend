@@ -972,12 +972,14 @@ const dotenv = require("dotenv");
 const path = require("path");
 const fs = require("fs");
 const upload = multer();
-const sgMail = require("@sendgrid/mail");
+// const sgMail = require("@sendgrid/mail");
+const { Resend } = require("resend");
 
 dotenv.config({ override: true });
 
 // ✅ Set SendGrid API Key
-sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+// sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 // ---------------- Your existing route ----------------
 routes.post("/send-email", async (req, res) => {
@@ -1769,73 +1771,88 @@ routes.post("/send-email", async (req, res) => {
   }
 
   try {
-    // Prepare email with attachments (inline images)
-    const msg = {
-      to,
-      from: process.env.EMAIL_USER, // must be verified in SendGrid
+    const attachments =
+      type === "USER_CONFIRMATION"
+        ? [
+            {
+              filename: "logo.png",
+              content: fs.readFileSync(
+                path.join(__dirname, "assets", "image1.png")
+              ),
+              content_id: "logo@careersure",
+            },
+            {
+              filename: "archana.png",
+              content: fs.readFileSync(
+                path.join(__dirname, "assets", "archana.png")
+              ),
+              content_id: "logo1@careersure",
+            },
+            {
+              filename: "dasthagiri.png",
+              content: fs.readFileSync(
+                path.join(__dirname, "assets", "dasthagiri.png")
+              ),
+              content_id: "logo2@careersure",
+            },
+            {
+              filename: "nikhil.png",
+              content: fs.readFileSync(
+                path.join(__dirname, "assets", "nikhil.png")
+              ),
+              content_id: "logo3@careersure",
+            },
+            {
+              filename: "mern.png",
+              content: fs.readFileSync(
+                path.join(__dirname, "assets", "mern.png")
+              ),
+              content_id: "logo4@careersure",
+            },
+          ]
+        : [];
+
+    // ✅ Send using Resend
+    // ✅ Send using Resend
+    // First send to the user
+    const { data: userResponse, error: userError } = await resend.emails.send({
+      from: process.env.EMAIL_USER || "onboarding@resend.dev",
+      to, // user's email
       subject: emailSubject,
       html: emailContent,
-      attachments:
-        type === "USER_CONFIRMATION"
-          ? [
-              {
-                content: fs
-                  .readFileSync(path.join(__dirname, "assets", "image1.png"))
-                  .toString("base64"),
-                filename: "logo.png",
-                type: "image/png",
-                disposition: "inline",
-                content_id: "logo@careersure",
-              },
-              {
-                content: fs
-                  .readFileSync(path.join(__dirname, "assets", "archana.png"))
-                  .toString("base64"),
-                filename: "archana.png",
-                type: "image/png",
-                disposition: "inline",
-                content_id: "logo1@careersure",
-              },
-              {
-                content: fs
-                  .readFileSync(
-                    path.join(__dirname, "assets", "dasthagiri.png")
-                  )
-                  .toString("base64"),
-                filename: "dasthagiri.png",
-                type: "image/png",
-                disposition: "inline",
-                content_id: "logo2@careersure",
-              },
-              {
-                content: fs
-                  .readFileSync(path.join(__dirname, "assets", "nikhil.png"))
-                  .toString("base64"),
-                filename: "nikhil.png",
-                type: "image/png",
-                disposition: "inline",
-                content_id: "logo3@careersure",
-              },
-              {
-                content: fs
-                  .readFileSync(path.join(__dirname, "assets", "mern.png"))
-                  .toString("base64"),
-                filename: "mern.png",
-                type: "image/png",
-                disposition: "inline",
-                content_id: "logo4@careersure",
-              },
-            ]
-          : [],
-    };
+      attachments,
+    });
 
-    await sgMail.send(msg);
+    if (userError) {
+      console.error("User Email Error:", userError);
+      return res.status(500).json({ error: "Failed to send email to user" });
+    }
 
-    res
-      .status(200)
-      .json({ success: true, message: "Email sent successfully!" });
-  } catch (error) {
-    console.error(error);
+    // ✅ Then send to sales team
+    const { data: salesResponse, error: salesError } = await resend.emails.send(
+      {
+        from: process.env.EMAIL_USER || "onboarding@resend.dev",
+        to: "careersure.info@gmail.com", // fixed sales team email
+        subject: "📩 New Lead Notification - Careersure Academy",
+        html: saleEmailContent, // or use same content as user, depends on need
+      }
+    );
+
+    if (salesError) {
+      console.error("Sales Email Error:", salesError);
+      return res
+        .status(500)
+        .json({ error: "Failed to send email to sales team" });
+    }
+
+    res.status(200).json({
+      success: true,
+      message: "Emails sent successfully!",
+      userId: userResponse?.id,
+      salesId: salesResponse?.id,
+    });
+  } catch (err) {
+    console.error("Unexpected error:", err);
     res.status(500).json({ error: "Failed to send email" });
   }
 });
