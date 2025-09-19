@@ -1849,7 +1849,7 @@ routes.post("/send-email", async (req, res) => {
       success: true,
       message: "Emails sent successfully!",
       userId: userResponse?.id,
-      salesId: salesResponse?.id,
+      // salesId: salesResponse?.id,
     });
   } catch (err) {
     console.error("Unexpected error:", err);
