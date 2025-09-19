@@ -1816,7 +1816,7 @@ routes.post("/send-email", async (req, res) => {
     // ✅ Send using Resend
     // First send to the user
     const { data: userResponse, error: userError } = await resend.emails.send({
-      from: process.env.EMAIL_USER || "onboarding@resend.dev",
+      from: process.env.EMAIL_USER,
       to, // user's email
       subject: emailSubject,
       html: emailContent,
