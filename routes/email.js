@@ -1067,7 +1067,7 @@ routes.post("/send-email", async (req, res) => {
       padding: 0;
       box-sizing: border-box;
     }
-    
+
     body,
     table,
     td,
@@ -1075,14 +1075,14 @@ routes.post("/send-email", async (req, res) => {
       -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
     }
-    
+
     table,
     td {
       mso-table-lspace: 0pt;
       mso-table-rspace: 0pt;
       border-collapse: collapse;
     }
-    
+
     img {
       -ms-interpolation-mode: bicubic;
       border: 0;
@@ -1573,7 +1573,7 @@ routes.post("/send-email", async (req, res) => {
       .container {
         border: 2px solid #F5840B;
       }
-      
+
       .story,
       .course-item {
         border: 1px solid #F5840B;
@@ -1586,7 +1586,7 @@ routes.post("/send-email", async (req, res) => {
         background: white !important;
         color: black !important;
       }
-      
+
       .container {
         box-shadow: none !important;
         border: 1px solid #ccc !important;
@@ -1615,7 +1615,7 @@ routes.post("/send-email", async (req, res) => {
   <div class="container">
     <!-- Header -->
     <div class="header">
-      <img src="cid:logo@careersure" alt="CareerSure Academy Logo" class="header-logo" />
+      <img src="https://drive.google.com/uc?export=download&id=1qpRdYAXhIrpvEx3rLLKsJHA93QRKjowQ" alt="CareerSure Academy Logo" class="header-logo" />
       <h1>Hello ${data.name},<br>Welcome to Careersure Academy!</h1>
     </div>
 
@@ -1633,23 +1633,23 @@ routes.post("/send-email", async (req, res) => {
       <h2>🌟 Success Stories That Inspire</h2>
       <div class="success-stories">
         <div class="story">
-          <img src="cid:logo2@careersure" alt="Dasthagiri" class="story-image" />
+          <img src="https://drive.google.com/uc?export=download&id=1Oc7DLsyZlBtOhYoHWwIBk16In9lYFMpG" alt="Dasthagiri" class="story-image" />
           <div class="story-name">Dasthagiri</div>
           <p class="story-text">
             "Landed Software Developer role at Saven Technologies within 5 months of training. The hands-on projects made all the difference!"
           </p>
         </div>
-        
+
         <div class="story">
-          <img src="cid:logo1@careersure" alt="Archana Vusa" class="story-image" />
+          <img src="https://drive.google.com/uc?export=download&id=1_quWlCdbJdAvhIgOAXoAHEgtKRGcTmZl" alt="Archana Vusa" class="story-image" />
           <div class="story-name">Archana Vusa</div>
           <p class="story-text">
             "Secured Full Stack Developer position at V&V Technologies. The mentorship and real-world projects prepared me perfectly!"
           </p>
         </div>
-        
+
         <div class="story">
-          <img src="cid:logo3@careersure" alt="Nikhil" class="story-image" />
+          <img src="https://drive.google.com/uc?export=download&id=1yWBJ9Mg9Y8TKcqDUdbV-7LuMfdEek1AP" alt="Nikhil" class="story-image" />
           <div class="story-name">Nikhil</div>
           <p class="story-text">
             "Got placed at TCS as Software Developer after 5 months of intensive training. Best investment in my career!"
@@ -1663,23 +1663,23 @@ routes.post("/send-email", async (req, res) => {
       <h2>🚀 Our Industry-Leading Courses</h2>
       <div class="courses">
         <div class="course-item">
-          <img src="cid:logo4@careersure" alt="MERN Stack Course" class="course-image" />
+          <img src="https://drive.google.com/uc?export=download&id=1zMCJssVaAFv8Wd_C3cwqlGG8CXhRrYSL" alt="MERN Stack Course" class="course-image" />
           <div class="course-title">MERN Full Stack with AI</div>
           <p class="course-description">
             Master MongoDB, Express.js, React, and Node.js with AI integration. Build production-ready applications with modern tools and deployment strategies.
           </p>
         </div>
-        
+
         <div class="course-item">
-          <img src="cid:logo5@careersure" alt="Python Full Stack Course" class="course-image" />
+          <img src="https://drive.google.com/uc?export=download&id=1qONhYYeXyyDTJqUSCLYMJTjnWV7rZdOC" alt="Python Full Stack Course" class="course-image" />
           <div class="course-title">Python Full Stack with AI</div>
           <p class="course-description">
             Learn Django, Flask, data analysis, machine learning, and AI concepts. Perfect for aspiring data scientists and full-stack developers.
           </p>
         </div>
-        
+
         <div class="course-item">
-          <img src="cid:logo6@careersure" alt="AI-ML Course" class="course-image" />
+          <img src="https://drive.google.com/uc?export=download&id=1Dx6Z_D-au2bkQMWIoJGvCTfjZWN7EqzX" alt="AI-ML Course" class="course-image" />
           <div class="course-title">AI, ML & Generative AI</div>
           <p class="course-description">
             Dive deep into artificial intelligence, machine learning algorithms, and generative AI. Includes AWS, Docker, Kubernetes, and CI/CD pipelines.
@@ -1703,8 +1703,8 @@ routes.post("/send-email", async (req, res) => {
       <p><strong>Careersure Academy</strong> - Your Partner in Career Success</p>
       <p>📧 contact@careersureacademy.com | 📞 +91-6301046346</p>
       <p style="margin-top: 15px; padding-top: 15px; border-top: 1px solid #444;">
-        <a href="https://careersureacademy.com/unsubscribe">Unsubscribe</a> | 
-        <a href="https://careersureacademy.com/privacy-policy">Privacy Policy</a> | 
+        <a href="https://careersureacademy.com/unsubscribe">Unsubscribe</a> |
+        <a href="https://careersureacademy.com/privacy-policy">Privacy Policy</a> |
         <a href="https://careersureacademy.com/terms">Terms of Service</a>
       </p>
       <p style="margin-top: 10px; font-size: 12px; color: #999;">
@@ -1776,38 +1776,38 @@ routes.post("/send-email", async (req, res) => {
         ? [
             {
               filename: "logo.png",
-              content: fs.readFileSync(
-                path.join(__dirname, "assets", "image1.png")
-              ),
-              content_id: "logo@careersure",
+              // content: fs.readFileSync(
+              //   path.join(__dirname, "assets", "image1.png")
+              // ),
+              // content_id: "logo@careersure",
             },
             {
               filename: "archana.png",
-              content: fs.readFileSync(
-                path.join(__dirname, "assets", "archana.png")
-              ),
-              content_id: "logo1@careersure",
+              // content: fs.readFileSync(
+              //   path.join(__dirname, "assets", "archana.png")
+              // ),
+              // content_id: "logo1@careersure",
             },
             {
               filename: "dasthagiri.png",
-              content: fs.readFileSync(
-                path.join(__dirname, "assets", "dasthagiri.png")
-              ),
-              content_id: "logo2@careersure",
+              // content: fs.readFileSync(
+              //   path.join(__dirname, "assets", "dasthagiri.png")
+              // ),
+              // content_id: "logo2@careersure",
             },
             {
               filename: "nikhil.png",
-              content: fs.readFileSync(
-                path.join(__dirname, "assets", "nikhil.png")
-              ),
-              content_id: "logo3@careersure",
+              // content: fs.readFileSync(
+              //   path.join(__dirname, "assets", "nikhil.png")
+              // ),
+              // content_id: "logo3@careersure",
             },
             {
               filename: "mern.png",
-              content: fs.readFileSync(
-                path.join(__dirname, "assets", "mern.png")
-              ),
-              content_id: "logo4@careersure",
+              // content: fs.readFileSync(
+              //   path.join(__dirname, "assets", "mern.png")
+              // ),
+              // content_id: "logo4@careersure",
             },
           ]
         : [];
@@ -1820,7 +1820,7 @@ routes.post("/send-email", async (req, res) => {
       to, // user's email
       subject: emailSubject,
       html: emailContent,
-      attachments,
+      // attachments,
     });
 
     if (userError) {
@@ -1858,3 +1858,318 @@ routes.post("/send-email", async (req, res) => {
 });
 
 module.exports = routes;
+
+// const express = require("express");
+// const multer = require("multer");
+// const routes = express.Router();
+// const dotenv = require("dotenv");
+// const path = require("path");
+// const fs = require("fs");
+// const upload = multer();
+// const { Resend } = require("resend");
+
+// dotenv.config({ override: true });
+
+// const resend = new Resend(process.env.RESEND_API_KEY);
+
+// // ---------------- Your existing route ----------------
+// routes.post("/send-email", async (req, res) => {
+//   const { to, type, data } = req.body;
+
+//   if (!to || !type || !data) {
+//     return res.status(400).json({ error: "Missing field required" });
+//   }
+
+//   let saleEmailContent = `<div style="max-width: 600px; margin: 30px auto; background-color: #ffffff; padding: 30px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); font-family: Arial, sans-serif;">
+//   <!-- Header -->
+//   <div style="background-color: #003366; color: #ffffff; padding: 15px 20px; border-radius: 8px; text-align: center; margin-bottom: 30px;">
+//     <h2 style="margin: 0; font-size: 22px;">New Student Lead Notification</h2>
+//   </div>
+
+//   <p style="font-size: 15px; color: #444444; margin-bottom: 25px;">
+//     <strong>A new student lead has been submitted through the Careersure Academy website.</strong>
+//   </p>
+
+//   <!-- Info Card -->
+//   <div style="margin-bottom: 20px;">
+//     <div style="font-weight: bold; color: #003366;">Name</div>
+//     <div style="padding: 10px 14px; background-color: #f0f8ff; border-left: 4px solid #0077cc; border-radius: 6px;">${
+//       data.name
+//     }</div>
+//   </div>
+
+//   <div style="margin-bottom: 20px;">
+//     <div style="font-weight: bold; color: #003366;">Email</div>
+//     <div style="padding: 10px 14px; background-color: #f0f8ff; border-left: 4px solid #0077cc; border-radius: 6px;">${
+//       data.email
+//     }</div>
+//   </div>
+
+//   <div style="margin-bottom: 20px;">
+//     <div style="font-weight: bold; color: #003366;">Phone</div>
+//     <div style="padding: 10px 14px; background-color: #f0f8ff; border-left: 4px solid #0077cc; border-radius: 6px;">${
+//       data.mobile
+//     }</div>
+//   </div>
+
+//   <div style="margin-bottom: 20px;">
+//     <div style="font-weight: bold; color: #003366;">Status</div>
+//     <div style="padding: 10px 14px; background-color: #f0f8ff; border-left: 4px solid #0077cc; border-radius: 6px;">${
+//       data.status
+//     }</div>
+//   </div>
+
+//   <div style="margin-bottom: 30px;">
+//     <div style="font-weight: bold; color: #003366;">Submitted At</div>
+//     <div style="padding: 10px 14px; background-color: #f0f8ff; border-left: 4px solid #0077cc; border-radius: 6px;">${new Date().toLocaleString()}</div>
+//   </div>
+
+//   <p style="font-size: 14px; color: #444;">
+//     📞 Please reach out to the lead as soon as possible.
+//   </p>
+
+//   <hr style="border: none; border-top: 1px solid #ddd; margin: 25px 0;" />
+
+//   <p style="font-size: 14px; color: #555;">
+//     Best Regards,<br/>
+//     <strong>Careersure Academy</strong>
+//   </p>
+// </div>`; // your existing HTML
+
+//   let studentEmailContent = `<!DOCTYPE html>
+// <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+// <head>
+//   <meta charset="UTF-8" />
+//   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+//   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+//   <title>Careersure Academy Email</title>
+//   <style>
+//     /* [Your existing CSS remains unchanged] */
+//     img {
+//       -ms-interpolation-mode: bicubic;
+//       border: 0;
+//       height: auto;
+//       line-height: 100%;
+//       outline: none;
+//       text-decoration: none;
+//       display: block;
+//       max-width: 100%;
+//     }
+//   </style>
+// </head>
+// <body class="email-body">
+//   <div class="container">
+//     <!-- Header -->
+//     <div class="header">
+//       <img src="cid:logo@careersure" alt="CareerSure Academy Logo" class="header-logo" />
+//       <h1>Hello ${data.name},<br>Welcome to Careersure Academy!</h1>
+//     </div>
+
+//     <!-- Introduction -->
+//     <div class="intro">
+//       <p>Thank you for reaching out to <strong>Careersure Academy</strong>. We're excited to support your career transformation journey.</p>
+//       <div class="highlight-box">
+//         <strong>✅ Your application has been successfully received!</strong><br>
+//         Our expert team will review your profile and get back to you within 24 hours.
+//       </div>
+//     </div>
+
+//     <!-- Success Stories -->
+//     <div class="success-section">
+//       <h2>🌟 Success Stories That Inspire</h2>
+//       <div class="success-stories">
+//         <div class="story">
+//           <img src="https://drive.google.com/uc?export=download&id=1Oc7DLsyZlBtOhYoHWwIBk16In9lYFMpG" alt="Dasthagiri" class="story-image" />
+//           <div class="story-name">Dasthagiri</div>
+//           <p class="story-text">"Landed Software Developer role at Saven Technologies within 5 months of training. The hands-on projects made all the difference!"</p>
+//         </div>
+//         <div class="story">
+//           <img src="https://drive.google.com/uc?export=download&id=1_quWlCdbJdAvhIgOAXoAHEgtKRGcTmZl" alt="Archana Vusa" class="story-image" />
+//           <div class="story-name">Archana Vusa</div>
+//           <p class="story-text">"Secured Full Stack Developer position at V&V Technologies. The mentorship and real-world projects prepared me perfectly!"</p>
+//         </div>
+//         <div class="story">
+//           <img src="https://drive.google.com/uc?export=download&id=1yWBJ9Mg9Y8TKcqDUdbV-7LuMfdEek1AP" alt="Nikhil" class="story-image" />
+//           <div class="story-name">Nikhil</div>
+//           <p class="story-text">"Got placed at TCS as Software Developer after 5 months of intensive training. Best investment in my career!"</p>
+//         </div>
+//       </div>
+//     </div>
+
+//     <!-- Popular Courses -->
+//     <div class="courses-section">
+//       <h2>🚀 Our Industry-Leading Courses</h2>
+//       <div class="courses">
+//         <div class="course-item">
+//           <img src="https://drive.google.com/uc?export=download&id=1zMCJssVaAFv8Wd_C3cwqlGG8CXhRrYSL" alt="MERN Stack Course" class="course-image" />
+//           <div class="course-title">MERN Full Stack with AI</div>
+//           <p class="course-description">Master MongoDB, Express.js, React, and Node.js with AI integration. Build production-ready applications with modern tools and deployment strategies.</p>
+//         </div>
+//         <div class="course-item">
+//           <img src="https://drive.google.com/uc?export=download&id=1qONhYYeXyyDTJqUSCLYMJTjnWV7rZdOC" alt="Python Full Stack Course" class="course-image" />
+//           <div class="course-title">Python Full Stack with AI</div>
+//           <p class="course-description">Learn Django, Flask, data analysis, machine learning, and AI concepts. Perfect for aspiring data scientists and full-stack developers.</p>
+//         </div>
+//         <div class="course-item">
+//           <img src="https://drive.google.com/uc?export=download&id=1Dx6Z_D-au2bkQMWIoJGvCTfjZWN7EqzX" alt="AI-ML Course" class="course-image" />
+//           <div class="course-title">AI, ML & Generative AI</div>
+//           <p class="course-description">Dive deep into artificial intelligence, machine learning algorithms, and generative AI. Includes AWS, Docker, Kubernetes, and CI/CD pipelines.</p>
+//         </div>
+//       </div>
+//     </div>
+
+//     <!-- Call to Action -->
+//     <div class="cta">
+//       <p style="margin-bottom: 20px; font-size: 18px; color: #F5840B; font-weight: 600;">Ready to Transform Your Career?</p>
+//       <a href="https://careersureacademy.com/courses" target="_blank" class="cta-button">Explore All Courses →</a>
+//     </div>
+
+//     <!-- Footer -->
+//     <div class="footer">
+//       <p><strong>Careersure Academy</strong> - Your Partner in Career Success</p>
+//       <p>📧 contact@careersureacademy.com | 📞 +91-6301046346</p>
+//       <p style="margin-top: 15px; padding-top: 15px; border-top: 1px solid #444;">
+//         <a href="https://careersureacademy.com/unsubscribe">Unsubscribe</a> |
+//         <a href="https://careersureacademy.com/privacy-policy">Privacy Policy</a> |
+//         <a href="https://careersureacademy.com/terms">Terms of Service</a>
+//       </p>
+//       <p style="margin-top: 10px; font-size: 12px; color: #999;">© 2025 Careersure Academy. All rights reserved.</p>
+//     </div>
+//   </div>
+// </body>
+// </html>`; // your existing HTML
+
+//   let mentorEmailContent = `<h2>New Mentorship Lead Notification</h2>
+//   <p><strong>A new mentorship enquiry has been submitted via the Careersure Academy platform.</strong></p>
+//   <table border="1" cellspacing="0" cellpadding="8" style="border-collapse: collapse; font-family: Arial, sans-serif; font-size: 14px;">
+//     <tr><th align="left">Full Name</th><td>${data.fullName}</td></tr>
+//     <tr><th align="left">Email</th><td><a href="mailto:${data.email}">${
+//     data.email
+//   }</a></td></tr>
+//     <tr><th align="left">Phone</th><td><a href="tel:${data.phone}">${
+//     data.phone
+//   }</a></td></tr>
+//     <tr><th align="left">Designation</th><td>${data.designation}</td></tr>
+//     <tr><th align="left">Current Company</th><td>${
+//       data.currentCompany
+//     }</td></tr>
+//     <tr><th align="left">Years of Experience</th><td>${
+//       data.experience
+//     }</td></tr>
+//     <tr><th align="left">Area of Expertise</th><td>${data.expertise}</td></tr>
+//     <tr><th align="left">LinkedIn Profile</th><td><a href="${
+//       data.linkedinProfile
+//     }" target="_blank">View Profile</a></td></tr>
+//     <tr><th align="left">Resume</th><td><a href="${
+//       data.resumeLink
+//     }" target="_blank">Download Resume</a></td></tr>
+//     <tr><th align="left">Message</th><td>${
+//       data.message || "(No message submitted)"
+//     }</td></tr>
+//     <tr><th align="left">Submitted At</th><td>${new Date(
+//       data.submittedAt
+//     ).toLocaleString()}</td></tr>
+//   </table>
+//   <p>Please reach out to the lead as soon as possible to qualify and engage.</p>
+//   <p>Regards,<br>Careersure Academy</p>`; // your existing HTML
+
+//   let studentEmailSubject = "Thank you for contacting Careersure Academy!";
+//   let saleEmailSubject = "New Lead Generated for CareerSure Academy!";
+//   let mentorEmailSubject = `🧑‍💼 New Mentorship Lead: ${data.fullName} - MERN Developer`;
+
+//   let emailContent;
+//   let emailSubject;
+
+//   switch (type) {
+//     case "ADMIN_NOTIFICATION":
+//       emailContent = saleEmailContent;
+//       emailSubject = saleEmailSubject;
+//       break;
+//     case "MENTOR_APPLICATION":
+//       emailContent = mentorEmailContent;
+//       emailSubject = mentorEmailSubject;
+//       break;
+//     case "USER_CONFIRMATION":
+//       emailContent = studentEmailContent;
+//       emailSubject = studentEmailSubject;
+//       break;
+//   }
+
+//   try {
+//     const attachments =
+//       type === "USER_CONFIRMATION"
+//         ? [
+//             {
+//               filename: "logo.png",
+//               content: fs.readFileSync(
+//                 path.join(__dirname, "assets", "image1.png")
+//               ),
+//               content_id: "logo@careersure",
+//               contentType: "image/png", // Specify MIME type
+//               disposition: "inline", // Ensure image is displayed inline
+//             },
+//             {
+//               filename: "archana.png",
+//               content: fs.readFileSync(
+//                 path.join(__dirname, "assets", "archana.png")
+//               ),
+//               content_id: "logo1@careersure",
+//               contentType: "image/png",
+//               disposition: "inline",
+//             },
+//             {
+//               filename: "dasthagiri.png",
+//               content: fs.readFileSync(
+//                 path.join(__dirname, "assets", "dasthagiri.png")
+//               ),
+//               content_id: "logo2@careersure",
+//               contentType: "image/png",
+//               disposition: "inline",
+//             },
+//             {
+//               filename: "nikhil.png",
+//               content: fs.readFileSync(
+//                 path.join(__dirname, "assets", "nikhil.png")
+//               ),
+//               content_id: "logo3@careersure",
+//               contentType: "image/png",
+//               disposition: "inline",
+//             },
+//             {
+//               filename: "mern.png",
+//               content: fs.readFileSync(
+//                 path.join(__dirname, "assets", "mern.png")
+//               ),
+//               content_id: "logo4@careersure",
+//               contentType: "image/png",
+//               disposition: "inline",
+//             },
+//           ]
+//         : [];
+
+//     // Send email using Resend
+//     const { data: userResponse, error: userError } = await resend.emails.send({
+//       from: process.env.EMAIL_USER,
+//       to,
+//       subject: emailSubject,
+//       html: emailContent,
+//       attachments,
+//     });
+
+//     if (userError) {
+//       console.error("User Email Error:", userError);
+//       return res.status(500).json({ error: "Failed to send email to user" });
+//     }
+
+//     res.status(200).json({
+//       success: true,
+//       message: "Emails sent successfully!",
+//       userId: userResponse?.id,
+//     });
+//   } catch (err) {
+//     console.error("Unexpected error:", err);
+//     res.status(500).json({ error: "Failed to send email" });
+//   }
+// });
+
+// module.exports = routes;
