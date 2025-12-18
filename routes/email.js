@@ -5,18 +5,12 @@ const dotenv = require("dotenv");
 const path = require("path");
 const fs = require("fs");
 const upload = multer();
-const nodemailer = require("nodemailer");
+const { Resend } = require("resend");
 
 dotenv.config({ override: true });
 
-// ✅ Configure Nodemailer transporter
-const transporter = nodemailer.createTransport({
-  service: "gmail", // or use host/port for other providers
-  auth: {
-    user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASS, // Use app password for Gmail
-  },
-});
+// ✅ Configure Resend
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 // ---------------- Your existing route ----------------
 routes.post("/send-email", async (req, res) => {
@@ -808,52 +802,23 @@ routes.post("/send-email", async (req, res) => {
   }
 
   try {
-    const attachments =
-      type === "USER_CONFIRMATION"
-        ? [
-            {
-              filename: "logo.png",
-              path: path.join(__dirname, "assets", "image1.png"),
-              cid: "logo@careersure",
-            },
-            {
-              filename: "archana.png",
-              path: path.join(__dirname, "assets", "archana.png"),
-              cid: "logo1@careersure",
-            },
-            {
-              filename: "dasthagiri.png",
-              path: path.join(__dirname, "assets", "dasthagiri.png"),
-              cid: "logo2@careersure",
-            },
-            {
-              filename: "nikhil.png",
-              path: path.join(__dirname, "assets", "nikhil.png"),
-              cid: "logo3@careersure",
-            },
-            {
-              filename: "mern.png",
-              path: path.join(__dirname, "assets", "mern.png"),
-              cid: "logo4@careersure",
-            },
-          ]
-        : [];
-
-    // ✅ Send using Nodemailer
-    const mailOptions = {
-      from: process.env.EMAIL_USER,
+    // ✅ Send using Resend
+    const { data: info, error } = await resend.emails.send({
+      from: "Careersure Academy <onboarding@resend.dev>",
       to,
       subject: emailSubject,
       html: emailContent,
-      attachments,
-    };
+    });
 
-    const info = await transporter.sendMail(mailOptions);
+    if (error) {
+      console.error("Email error:", error);
+      return res.status(500).json({ error: "Failed to send email" });
+    }
 
     res.status(200).json({
       success: true,
       message: "Email sent successfully!",
-      messageId: info.messageId,
+      messageId: info.id,
     });
   } catch (err) {
     console.error("Email error:", err);
